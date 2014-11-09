@@ -5,6 +5,10 @@ gem 'pg'
 gem 'rails_12factor', group: :production
 
 gem 'sass-rails', '~> 4.0.3'
+gem 'compass-rails'
+gem 'susy'
+gem 'font-awesome-rails' 
+
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 

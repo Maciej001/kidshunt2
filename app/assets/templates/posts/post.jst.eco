@@ -1,6 +1,5 @@
 <header class="title-container">
-	<input type="text" class="post-title" value="<%= @post.get('title') %>" 
-	placeholder="Title..."/>
+	<h4 type="text" class="post-title" placeholder="Title..."><%= @post.get('title') %></h2>
 </header>
 <div class="tagline">
 	<p placeholder="Content..."><%= @post.get("tagline") %></p> 
