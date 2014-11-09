@@ -4,9 +4,10 @@ gem 'rails', '4.1.4'
 gem 'pg'
 gem 'rails_12factor', group: :production
 
-gem 'sass-rails', '~> 4.0.3'
-gem 'compass-rails'
+gem 'sprockets', '~> 2.12'
+gem 'sass-rails', '~> 5.0.0.beta1'
 gem 'susy'
+gem 'compass-rails', '~> 2.0.0'
 gem 'font-awesome-rails' 
 
 gem 'uglifier', '>= 1.3.0'

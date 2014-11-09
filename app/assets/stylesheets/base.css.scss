@@ -1,4 +1,5 @@
 body {
+	@include container(80em);
 	font-family: $proxima;
 	color: $gray;
 }
