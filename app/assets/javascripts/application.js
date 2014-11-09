@@ -12,8 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-
-
 //= require lodash
 //= require backbone
 //= require moment
@@ -23,5 +21,4 @@
 //= require_tree ./collections
 //= require_tree ./views
 //= require_tree ./routers
-
 //= require_tree .
