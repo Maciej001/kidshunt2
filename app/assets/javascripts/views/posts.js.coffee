@@ -7,9 +7,11 @@ class App.Views.Posts extends Backbone.View
 	className: 'posts'
 
 	initialize: -> 
+		@listenTo(@collection, 'all', @render)
 
 	render: =>
 		@$el.html @template()
+		@collection.sort({silent: true})
 		@collection.forEach(@renderPost)
 		this
 

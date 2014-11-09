@@ -1,6 +1,6 @@
 <section class="upvotes">
 	<i class="fa fa-caret-up"></i>
-	<h6> <%= @post.get('upvotes') %> </h6>	
+	<h6 class="upvotes-number"> <%= @post.get('upvotes') %> </h6>	
 </section>
 <a href="<%= @post.get('url') %>" class="title-link" target="_blank" placeholder="Title...">
 	<%= @post.get('title') %>

@@ -9,6 +9,14 @@ class PostsController < ApplicationController
 		respond_with posts
 	end
 
+	def update
+		post.update_attributes(posts_params)
+
+		respond_with( post ) do |format| 
+			format.json { render json: post }
+		end
+	end
+
 	def posts
 		@posts ||= Post.all 
 	end
@@ -20,7 +28,7 @@ class PostsController < ApplicationController
 	private
 
 		def posts_params 
-			params.permit(:title, :tagline)
+			params.permit(:title, :tagline, :url, :upvotes)
 		end
 
 end
