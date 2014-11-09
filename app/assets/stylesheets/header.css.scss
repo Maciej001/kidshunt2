@@ -1,0 +1,61 @@
+header {
+	padding: 15px 0;
+	border-bottom: 1px solid $vvlight-gray;
+}
+
+.header-wrapper {
+	@include container(60em);
+}
+
+section.logo {
+	@include span(6);
+}
+
+.logo-circle h4 {
+	display: inline-block;
+	float: left;
+	vertical-align: middle;
+	width: 38px;
+	height: 38px;
+	background: $red;
+	color: white;
+	padding: 9px 9px 9px 11px;
+	margin-right: 20px;
+	@include border-radius(50%);
+}
+
+section.menu {
+	@include span(6 last);
+
+	ul {
+		float: right;
+		height: 40px;
+		line-height: 40px;
+		li {
+			float: left;
+			padding: 0 20px;
+		}
+	}
+}
+
+.logo-title h5 {
+	color: $red;
+	margin-bottom: 5px;
+}
+
+.logo-tagline h6 {
+	color: $light-gray;
+	font-weight: 200;
+}
+
+section .menu {
+	float: right;
+}
+
+.fa {
+	padding-top: 5px;
+	font-size: 1.6rem;
+}
+.fa.fa-plus {
+	color: $yellow;
+}

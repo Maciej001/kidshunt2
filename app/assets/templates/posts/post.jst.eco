@@ -1,6 +1,10 @@
-<header class="title-container">
-	<h4 type="text" class="post-title" placeholder="Title..."><%= @post.get('title') %></h2>
-</header>
+<section class="upvotes">
+	<i class="fa fa-caret-up"></i>
+	<h6> <%= @post.get('upvotes') %> </h6>	
+</section>
+<a href="<%= @post.get('url') %>" class="title-link" target="_blank" placeholder="Title...">
+	<%= @post.get('title') %>
+</a>
 <div class="tagline">
 	<p placeholder="Content..."><%= @post.get("tagline") %></p> 
 </div>

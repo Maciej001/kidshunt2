@@ -1,9 +1,16 @@
+*, *:before, *:after {
+	@include box-sizing(border-box);
+}
+
 body {
-	@include container(80em);
 	font-family: $proxima;
 	color: $gray;
 }
 
 h4 {
 	color: $blue;
+}
+
+a {
+	text-decoration: none;
 }
