@@ -1,0 +1,8 @@
+<h5>POST NEW HUNT</h5>
+<p>Find something new and interesting? Share it with us!</p>
+
+<input type="text" class="post-url"	placeholder="URL / link"/>
+<input type="text" class="post-title"	placeholder="Title"/>
+<input type="text" class="post-tagline" placeholder="Short description"/> 
+<button class="save-post btn btn-yellow">Save</button>
+<button class="cancel-post btn btn-red">Cancel</button>

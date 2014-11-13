@@ -12,6 +12,14 @@
 	}
 }
 
+#trigger-add-post {
+	&:hover {
+		@include transition(all, 0.3s);
+		color: $green;
+		cursor: pointer;
+	}
+}
+
 .upvotes {
 	display: inline-block;
 	float: left;
@@ -45,4 +53,33 @@
 	&:hover {
 		color: darken($blue, 15%);
 	}
+}
+
+body {
+	position: relative;
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255, 0.7);
+}
+
+.add-post {
+	position: absolute;
+	right: 0px;
+	top: 70px;
+	padding: 50px;
+	border: 1px solid $vvlight-gray;
+	background: white;
+
+	h5 {
+		color: $green;
+		margin-bottom: 10px;
+	}
+	p {
+		margin-bottom: 20px;
+	}
+	button { margin-top: 10px;}
 }

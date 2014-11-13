@@ -4,6 +4,8 @@ class App.Collections.Posts extends Backbone.Collection
 	model: App.Models.Post
 	comparator: 'upvotes'
 
+	initialize: ->
+
 	comparator: (a, b) ->
 		return  0 if a.get('upvotes') == b.get('upvotes')
 		return -1 if a.get('upvotes') > b.get('upvotes')

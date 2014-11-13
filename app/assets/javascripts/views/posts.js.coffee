@@ -7,9 +7,15 @@ class App.Views.Posts extends Backbone.View
 	className: 'posts'
 
 	initialize: -> 
+		# addPostTrigger is a yellow cross in the menu responsible for opening the addPost form
+		@addPostTrigger = new App.Views.AddPostTrigger() 
+
 		@listenTo(@collection, 'all', @render)
+		@listenTo(@collection, 'add', @renderPost)
 
 	render: =>
+		$('.menu-about').append @addPostTrigger.render().el 
+
 		@$el.html @template()
 		@collection.sort({silent: true})
 		@collection.forEach(@renderPost)

@@ -13,4 +13,46 @@ h4 {
 
 a {
 	text-decoration: none;
+	color: $gray;
 }
+
+input {
+	border: 1px solid $vlight-gray;
+	width: 100%;
+}
+
+input[type='text'] {
+	width: 100%;
+	height: 45px;
+	padding: 5px 5px 5px 15px;
+	margin-bottom: 10px;
+	font-size: 1rem;
+	color: $gray;
+	&:focus {
+		border: 1px solid white;
+		outline: 1px solid $green;
+	}
+}
+
+.btn {
+	padding: 7px 15px;
+	margin-right: 10px;
+	color: white;
+	@include border-radius(20px);
+	border: none;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+button:focus {outline:0 !important;}
+
+.btn-yellow 	{ background: $yellow; }
+.btn-red 			{ background: $red; }
+.btn-blue 		{ background: $blue; }
+.btn-green 		{ background: $green; }

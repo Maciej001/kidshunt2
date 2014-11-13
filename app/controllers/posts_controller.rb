@@ -9,6 +9,11 @@ class PostsController < ApplicationController
 		respond_with posts
 	end
 
+	def create
+		post = Post.create(posts_params)
+		respond_with post
+	end
+
 	def update
 		post.update_attributes(posts_params)
 
