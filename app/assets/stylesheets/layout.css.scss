@@ -12,7 +12,7 @@
 	}
 }
 
-#trigger-add-post {
+#new-post {
 	&:hover {
 		@include transition(all, 0.3s);
 		color: $green;

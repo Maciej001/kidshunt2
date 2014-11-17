@@ -2,17 +2,15 @@
 
 class App.Views.Post extends Backbone.View
 
-	template: JST['posts/post']
-
-	className: 'post'
+	template: 			JST['posts/post']
+	className: 			'post'
+	tagName: 				'li'
 
 	events: 
 		'click .upvotes': 'upvotePost'
 
-	initialize: ->
-
 	render: ->
-		@$el.html( @template( post: @model ) )
+		@$el.html  @template( post: @model ) 
 		this
 
 	upvotePost: ->

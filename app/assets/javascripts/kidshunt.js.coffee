@@ -9,12 +9,11 @@ window.KidsHunt =
 	Routers: {}
 
 	initialize: ->
-		@AllPosts = new @Collections.Posts(@postsJson)
+		@AllPosts = new @Collections.Posts @postsJson
 		view = new @Views.Posts collection: @AllPosts
-		$("#container").html( view.render().el )
+		$("#container").html   view.render().el 
 		
 window.App = window.KidsHunt
 
 $ ->
-
 	App.initialize() 

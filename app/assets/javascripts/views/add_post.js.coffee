@@ -1,5 +1,7 @@
 class App.Views.AddPost extends Backbone.View 
 
+	el: '#all'
+
 	template: JST['posts/add_post']
 
 	className: 'add-post'
@@ -17,7 +19,7 @@ class App.Views.AddPost extends Backbone.View
 			url: 			@$('.post-url').val()
 			title: 		@$('.post-title').val()
 			content: 	@$('.post-tagline').val()
-			
+
 		@model.save()
 		false
 
