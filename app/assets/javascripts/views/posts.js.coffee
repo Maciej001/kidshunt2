@@ -8,7 +8,7 @@ class App.Views.Posts extends Backbone.View
 		@listenTo  @collection, 'all', @render 
 		@listenTo  @collection, 'add', @renderPost
 
-		@triggerView = new App.Views.AddPostTrigger tagName: 'li'
+		@triggerView = new App.Views.AddPostTrigger collection: @collection, tagName: 'li'
 		$('.menu-list').prepend @triggerView.render().el 
 
 	render: =>

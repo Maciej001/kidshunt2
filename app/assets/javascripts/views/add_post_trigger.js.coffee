@@ -3,7 +3,7 @@ class App.Views.AddPostTrigger extends Backbone.View
 	template: JST['posts/add_post_trigger']
 
 	events: 
-		# 'click #trigger-add-post': 'newPost'
+		'click #new-post': 'newPost'
 		'click .cancel-add-post': 'cancelPost'
 
 	render: ->

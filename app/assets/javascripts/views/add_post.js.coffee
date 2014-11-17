@@ -1,7 +1,5 @@
 class App.Views.AddPost extends Backbone.View 
 
-	el: '#all'
-
 	template: JST['posts/add_post']
 
 	className: 'add-post'
@@ -15,12 +13,16 @@ class App.Views.AddPost extends Backbone.View
 		this
 
 	savePost: ->
-		@model.set 
-			url: 			@$('.post-url').val()
-			title: 		@$('.post-title').val()
-			content: 	@$('.post-tagline').val()
+		new_url = @$('.post-title').val()
 
-		@model.save()
+		@collection.create {
+			url: 			"http://#{@$('.post-url').val()}"
+			title: 		new_url
+			tagline: 	@$('.post-tagline').val()
+			upvotes: 1
+		}	
+		@remove()
+		$('.overlay').remove()
 		false
 
 	cancelPost: ->
