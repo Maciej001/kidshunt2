@@ -12,3 +12,4 @@ module Kidshunt2
 
   end
 end
+

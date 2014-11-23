@@ -1,0 +1,8 @@
+/ flash is cleared with each request. This means that valuesstored there will only 
+/ be available in the next request.
+
+- if flash.any?
+	- flash.each do |name, msg|
+		- if msg.is_a?(String)
+			%div{class: "alert alert-#{name.to_s == 'notice' ? 'notice' : 'alert'}" }
+				= content_tag :p, msg, :id => "flash_#{name}"

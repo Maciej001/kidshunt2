@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: "posts#index"
 
   resources :posts, only: [:index, :create, :update, :destroy]
 
-  get '*any' => 'posts#index'
 end

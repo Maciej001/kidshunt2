@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'haml'
 gem 'jquery-rails'
 
+gem 'devise'
+
 gem 'backbone-on-rails'
 gem 'lodash-rails'
 gem 'momentjs-rails', '~> 2.8.3'  # data and time

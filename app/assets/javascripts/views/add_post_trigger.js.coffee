@@ -14,4 +14,5 @@ class App.Views.AddPostTrigger extends Backbone.View
 		# Overlay white background
 		$('body').prepend($('<div class="overlay"></div>')).hide().fadeIn()
 		@addPost = new App.Views.AddPost collection: @collection
+
 		$(@addPost.render().el).appendTo('body').hide().fadeIn(300); 

@@ -1,0 +1,22 @@
+.devise-form
+	%h4.devise-form-header Sign Up
+
+	= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+		= devise_error_messages!
+
+		%div.form-field
+			= f.label :email
+			= f.email_field :email, autofocus: true
+
+		%div.form-field
+			= f.label :password
+			= f.password_field :password, autocomplete: "off"
+
+		%div.form-field
+			= f.label :password_confirmation
+			= f.password_field :password_confirmation, autocomplete: "off"
+
+		= f.submit "Sign up", class: "btn btn-yellow"
+
+	.shared-links
+		= render "devise/shared/links"

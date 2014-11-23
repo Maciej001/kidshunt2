@@ -28,13 +28,29 @@ input[type='text'] {
 	margin-bottom: 10px;
 	font-size: 1rem;
 	color: $gray;
+	border: 1px solid $vlight-gray;
 	&:focus {
 		border: 1px solid white;
 		outline: 1px solid $green;
 	}
 }
 
+input[type="checkbox"] {
+	float: left;
+	display: block;
+	width: 30px;
+	margin: 0;
+}
+
+// to remove yellow background in autocompleted 
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
 .btn {
+	display: inline;
+	width: auto;
 	padding: 7px 15px;
 	margin-right: 10px;
 	color: white;
@@ -43,6 +59,7 @@ input[type='text'] {
 
 	&:hover {
 		cursor: pointer;
+		@include transition(all, 0.3s);
 	}
 }
 
@@ -52,7 +69,46 @@ button::-moz-focus-inner {
 
 button:focus {outline:0 !important;}
 
-.btn-yellow 	{ background: $yellow; }
-.btn-red 			{ background: $red; }
-.btn-blue 		{ background: $blue; }
-.btn-green 		{ background: $green; }
+.btn-yellow 			{ 
+	background: $yellow;
+	&:hover { 
+		background: darken($yellow, 10%); 
+	}
+}
+
+.btn-red 			{ 
+	background: $red;
+	&:hover { 
+		background: darken($red, 10%); 
+	}
+}
+
+.btn-blue 			{ 
+	background: $blue;
+	&:hover { 
+		background: darken($blue, 10%); 
+	}
+}
+
+.btn-green 			{ 
+	background: $green;
+	&:hover { 
+		background: darken($green, 10%); 
+	}
+}
+
+// Errors
+
+#error_explanation {
+	margin-bottom: 20px;
+
+	h2 {
+		font-size: 1.2rem;
+		margin-bottom: 10px;
+	}
+
+	li {
+		margin-bottom: 10px;
+		color: $red;
+	}
+}

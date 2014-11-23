@@ -9,9 +9,13 @@
 				%h6 The best kids internet, every day
 		%section.menu
 			%ul.menu-list
-				/ %li
-				/ 	%i.fa.fa-plus#new-post
 				%li.menu-about
 					=link_to 'About', '#'
+				- if user_signed_in?
+					%li= link_to "#{current_user.first_name}'s Profile", edit_user_registration_path
+					%li= link_to 'Log Out', destroy_user_session_path, method: :delete
+				- else
+					%li= link_to 'Log In', new_user_session_path
+					%li= link_to 'Sign Up', new_user_registration_path
 				%li 
-					%i.fa.fa-user
+					
